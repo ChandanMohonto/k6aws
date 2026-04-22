@@ -98,7 +98,7 @@ export function setup() {
   const authForm = { Authorization: `Bearer ${token}` };
 
   // ── Step 2: Create 100 bidder accounts ────────────────────
-  console.log('Step 2: Creating 100 bidder accounts...');
+  console.log('Step 2: Creating 1000 bidder accounts...');
   const bidders = [];
 
   for (let i = 1; i <= 1000; i++) {
@@ -135,7 +135,7 @@ export function setup() {
     sleep(0.1);
   }
 
-  console.log(`✅ ${bidders.length}/100 bidder accounts ready`);
+  console.log(`✅ ${bidders.length}/1000 bidder accounts ready`);
 
   const bidderIds = bidders.map(b => b.id).filter(id => id !== null && id !== undefined);
   console.log(`Bidder IDs collected: ${bidderIds.length}`);
@@ -173,7 +173,7 @@ export function setup() {
   sleep(1);
 
   // ── Step 3: Create 10 fresh auctions ──────────────────────
-  console.log(`Step 3: Creating 10 auctions with ${bidderIds.length} bidder IDs...`);
+  console.log(`Step 3: Creating 100 auctions with ${bidderIds.length} bidder IDs...`);
   const auctionIds = [];
 
   for (let a = 1; a <= 100; a++) {

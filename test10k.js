@@ -161,18 +161,42 @@ export function setup() {
   const auctionIds = [];
   for (let a = 1; a <= 100; a++) {
     const auctionAt = new Date(Date.now() + 7200000).toISOString();
-    let parts = [
-      'title='            + encodeURIComponent(`Bidzon Load Test Auction ${a}`),
-      'description='      + encodeURIComponent(`Stress test auction ${a}`),
-      'starting_price=10.00', 'stake=1.00', 'final_price=9999.00',
-      'shipping_charges=0.00',
-      'auction_at='       + encodeURIComponent(auctionAt),
-      'no_of_bidders='    + String(bidderIds.length),
-    ];
-    bidderIds.forEach(id => parts.push('bidders=' + String(id)));
-    const aRes  = http.post(`${BASE_URL}/auction/create`, parts.join('&'), {
-      headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/x-www-form-urlencoded' },
-    });
+    // let parts = [
+    //   'title='            + encodeURIComponent(`Bidzon Load Test Auction ${a}`),
+    //   'description='      + encodeURIComponent(`Stress test auction ${a}`),
+    //   'starting_price=10.00', 'stake=1.00', 'final_price=9999.00',
+    //   'shipping_charges=0.00',
+    //   'auction_at='       + encodeURIComponent(auctionAt),
+    //   'no_of_bidders='    + String(bidderIds.length),
+    // ];
+    // bidderIds.forEach(id => parts.push('bidders=' + String(id)));
+    // const aRes  = http.post(`${BASE_URL}/auction/create`, parts.join('&'), {
+    //   headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/x-www-form-urlencoded' },
+    // });
+
+
+    //new code 
+    // ✅ Clean, compact, no repeated keys
+const auctionPayload = JSON.stringify({
+  title:            `Bidzon Load Test Auction ${a}`,
+  description:      `Stress test auction ${a}`,
+  starting_price:   '10.00',
+  stake:            '1.00',
+  final_price:      '9999.00',
+  shipping_charges: '0.00',
+  auction_at:       auctionAt,
+  no_of_bidders:    bidderIds.length,
+  bidders:          bidderIds,   // clean array — no repeated keys
+});
+
+const aRes = http.post(`${BASE_URL}/auction/create`, auctionPayload, {
+  headers: {
+    Authorization:  `Bearer ${token}`,
+    'Content-Type': 'application/json',   // ← changed
+  },
+});
+    //new code end
+
     const aBody = safeJSON(aRes);
     if (aRes.status === 200 && aBody && aBody.success) {
       auctionIds.push(aBody.data.id);
