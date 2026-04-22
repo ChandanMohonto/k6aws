@@ -1,0 +1,17 @@
+chmod 400 "k6.pem"
+ssh -i "k6.pem" ubuntu@ec2-63-179-5-14.eu-central-1.compute.amazonaws.com
+
+echo "# k6aws" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/ChandanMohonto/k6aws.git
+git push -u origin main
+
+
+git remote add origin git@github.com:ChandanMohonto/k6bidzon.git
+git branch -M main
+git push -u origin main
+
+
