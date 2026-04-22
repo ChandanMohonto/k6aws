@@ -14,4 +14,9 @@ git remote add origin git@github.com:ChandanMohonto/k6bidzon.git
 git branch -M main
 git push -u origin main
 
+------------at aws ----------
+git add 
+git commit 
+git push -u origin main --force
+
 

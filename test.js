@@ -101,7 +101,7 @@ export function setup() {
   console.log('Step 2: Creating 100 bidder accounts...');
   const bidders = [];
 
-  for (let i = 1; i <= 100; i++) {
+  for (let i = 1; i <= 1000; i++) {
     const num   = String(i).padStart(3, '0');
     const email = `bidzon_bidder${num}@test.com`;
     const name  = `BidzonBidder${num}`;
@@ -176,7 +176,7 @@ export function setup() {
   console.log(`Step 3: Creating 10 auctions with ${bidderIds.length} bidder IDs...`);
   const auctionIds = [];
 
-  for (let a = 1; a <= 10; a++) {
+  for (let a = 1; a <= 100; a++) {
     // 2 hours from now — timer won't expire during test
     const auctionAt = new Date(Date.now() + 7200000).toISOString();
 

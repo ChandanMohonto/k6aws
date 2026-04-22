@@ -104,7 +104,7 @@ export function setup() {
   // Step 2: Create 100 bidder accounts
   console.log('Step 2: Creating 100 bidder accounts...');
   const bidders = [];
-  for (let i = 1; i <= 100; i++) {
+  for (let i = 1; i <= 1000; i++) {
     const num   = String(i).padStart(3, '0');
     const email = `bidzon_bidder${num}@test.com`;
     const res   = http.post(
@@ -159,7 +159,7 @@ export function setup() {
   // Step 3: Create 10 fresh auctions
   console.log(`Step 3: Creating 10 auctions with ${bidderIds.length} bidders...`);
   const auctionIds = [];
-  for (let a = 1; a <= 10; a++) {
+  for (let a = 1; a <= 100; a++) {
     const auctionAt = new Date(Date.now() + 7200000).toISOString();
     let parts = [
       'title='            + encodeURIComponent(`Bidzon Load Test Auction ${a}`),
