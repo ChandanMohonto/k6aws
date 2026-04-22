@@ -1,0 +1,850 @@
+{
+  "metrics": {
+    "http_req_failed": {
+      "type": "rate",
+      "contains": "default",
+      "values": {
+        "rate": 0.02736318407960199,
+        "passes": 110,
+        "fails": 3910
+      },
+      "thresholds": {
+        "rate<0.01": {
+          "ok": false
+        }
+      }
+    },
+    "http_req_duration{expected_response:true}": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "avg": 122.73947065038371,
+        "min": 4.62732,
+        "med": 27.488388,
+        "max": 1586.805628,
+        "p(90)": 374.56263979999994,
+        "p(95)": 501.246194
+      }
+    },
+    "http_req_sending": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "avg": 0.032853044278607045,
+        "min": 0.010313,
+        "med": 0.0333345,
+        "max": 0.169612,
+        "p(90)": 0.0444904,
+        "p(95)": 0.05547299999999995
+      }
+    },
+    "data_received": {
+      "type": "counter",
+      "contains": "data",
+      "values": {
+        "count": 3891792736,
+        "rate": 11297966.301532902
+      }
+    },
+    "vus": {
+      "values": {
+        "value": 1,
+        "min": 0,
+        "max": 20
+      },
+      "type": "gauge",
+      "contains": "default"
+    },
+    "data_sent": {
+      "type": "counter",
+      "contains": "data",
+      "values": {
+        "count": 1025107,
+        "rate": 2975.9098510906642
+      }
+    },
+    "iterations": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 407,
+        "rate": 1.181530620114681
+      }
+    },
+    "http_req_duration": {
+      "values": {
+        "min": 4.62732,
+        "med": 26.8042565,
+        "max": 1586.805628,
+        "p(90)": 370.26477339999997,
+        "p(95)": 499.44314664999996,
+        "avg": 119.65455259701501
+      },
+      "thresholds": {
+        "p(95)<1500": {
+          "ok": true
+        },
+        "p(99)<3000": {
+          "ok": true
+        }
+      },
+      "type": "trend",
+      "contains": "time"
+    },
+    "http_req_tls_handshaking": {
+      "contains": "time",
+      "values": {
+        "avg": 0,
+        "min": 0,
+        "med": 0,
+        "max": 0,
+        "p(90)": 0,
+        "p(95)": 0
+      },
+      "type": "trend"
+    },
+    "http_req_connecting": {
+      "contains": "time",
+      "values": {
+        "p(90)": 0,
+        "p(95)": 0,
+        "avg": 0.025136263184079605,
+        "min": 0,
+        "med": 0,
+        "max": 6.221896
+      },
+      "type": "trend"
+    },
+    "http_req_receiving": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "avg": 16.79213687238802,
+        "min": 0.033153,
+        "med": 0.09100349999999999,
+        "max": 707.359116,
+        "p(90)": 74.9171322,
+        "p(95)": 115.91940724999999
+      }
+    },
+    "iteration_duration": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "min": 8022.015986,
+        "med": 12098.58737,
+        "max": 17042.733208,
+        "p(90)": 14303.163043,
+        "p(95)": 14739.3510831,
+        "avg": 12115.920682238335
+      }
+    },
+    "http_reqs": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "rate": 11.670155019314539,
+        "count": 4020
+      }
+    },
+    "http_req_blocked": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "max": 6.326242,
+        "p(90)": 0.0111443,
+        "p(95)": 0.012996549999999987,
+        "avg": 0.03503336069651734,
+        "min": 0.003733,
+        "med": 0.009241
+      }
+    },
+    "bid_duration": {
+      "contains": "time",
+      "values": {
+        "avg": 44.55959595959596,
+        "min": 5,
+        "med": 7,
+        "max": 417,
+        "p(90)": 144.20000000000005,
+        "p(95)": 186.29999999999995
+      },
+      "thresholds": {
+        "p(95)<800": {
+          "ok": true
+        }
+      },
+      "type": "trend"
+    },
+    "error_rate": {
+      "type": "rate",
+      "contains": "default",
+      "values": {
+        "rate": 0,
+        "passes": 0,
+        "fails": 407
+      },
+      "thresholds": {
+        "rate<0.01": {
+          "ok": true
+        }
+      }
+    },
+    "auction_list_duration": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "p(95)": 753,
+        "avg": 421.35872235872233,
+        "min": 257,
+        "med": 362,
+        "max": 1076,
+        "p(90)": 659.4000000000001
+      },
+      "thresholds": {
+        "p(95)<2000": {
+          "ok": true
+        }
+      }
+    },
+    "vus_max": {
+      "type": "gauge",
+      "contains": "default",
+      "values": {
+        "min": 20,
+        "max": 20,
+        "value": 20
+      }
+    },
+    "http_req_waiting": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "max": 1586.692206,
+        "p(90)": 286.1786021,
+        "p(95)": 441.40673459999994,
+        "avg": 102.82956268034835,
+        "min": 4.534047,
+        "med": 17.4906925
+      }
+    },
+    "checks": {
+      "values": {
+        "rate": 1,
+        "passes": 1238,
+        "fails": 0
+      },
+      "type": "rate",
+      "contains": "default"
+    },
+    "login_duration": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "avg": 336.2628992628993,
+        "min": 80,
+        "med": 238,
+        "max": 1587,
+        "p(90)": 668.0000000000002,
+        "p(95)": 813.8999999999999
+      },
+      "thresholds": {
+        "p(95)<1500": {
+          "ok": true
+        }
+      }
+    },
+    "bid_success_total": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 495,
+        "rate": 1.4369967001394768
+      }
+    }
+  },
+  "setup_data": {
+    "auctionIds": [
+      269,
+      270,
+      271,
+      272,
+      273,
+      274,
+      275,
+      276,
+      277,
+      278
+    ],
+    "bidders": [
+      {
+        "email": "bidzon_bidder001@test.com",
+        "id": 12055,
+        "password": "Test@123"
+      },
+      {
+        "password": "Test@123",
+        "email": "bidzon_bidder002@test.com",
+        "id": 12056
+      },
+      {
+        "id": 12057,
+        "password": "Test@123",
+        "email": "bidzon_bidder003@test.com"
+      },
+      {
+        "password": "Test@123",
+        "email": "bidzon_bidder004@test.com",
+        "id": 12058
+      },
+      {
+        "email": "bidzon_bidder005@test.com",
+        "id": 12059,
+        "password": "Test@123"
+      },
+      {
+        "password": "Test@123",
+        "email": "bidzon_bidder006@test.com",
+        "id": 12060
+      },
+      {
+        "email": "bidzon_bidder007@test.com",
+        "id": 12061,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder008@test.com",
+        "id": 12062,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder009@test.com",
+        "id": 12063,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder010@test.com",
+        "id": 12064,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder011@test.com",
+        "id": 12065,
+        "password": "Test@123"
+      },
+      {
+        "id": 12066,
+        "password": "Test@123",
+        "email": "bidzon_bidder012@test.com"
+      },
+      {
+        "email": "bidzon_bidder013@test.com",
+        "id": 12067,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder014@test.com",
+        "id": 12068,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder015@test.com",
+        "id": 12069,
+        "password": "Test@123"
+      },
+      {
+        "password": "Test@123",
+        "email": "bidzon_bidder016@test.com",
+        "id": 12070
+      },
+      {
+        "id": 12071,
+        "password": "Test@123",
+        "email": "bidzon_bidder017@test.com"
+      },
+      {
+        "email": "bidzon_bidder018@test.com",
+        "id": 12072,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder019@test.com",
+        "id": 12073,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder020@test.com",
+        "id": 12074,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder021@test.com",
+        "id": 12075,
+        "password": "Test@123"
+      },
+      {
+        "password": "Test@123",
+        "email": "bidzon_bidder022@test.com",
+        "id": 12076
+      },
+      {
+        "email": "bidzon_bidder023@test.com",
+        "id": 12077,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder024@test.com",
+        "id": 12078,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder025@test.com",
+        "id": 12079,
+        "password": "Test@123"
+      },
+      {
+        "id": 12080,
+        "password": "Test@123",
+        "email": "bidzon_bidder026@test.com"
+      },
+      {
+        "password": "Test@123",
+        "email": "bidzon_bidder027@test.com",
+        "id": 12081
+      },
+      {
+        "id": 12082,
+        "password": "Test@123",
+        "email": "bidzon_bidder028@test.com"
+      },
+      {
+        "email": "bidzon_bidder029@test.com",
+        "id": 12083,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder030@test.com",
+        "id": 12084,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder031@test.com",
+        "id": 12085,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder032@test.com",
+        "id": 12086,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder033@test.com",
+        "id": 12087,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder034@test.com",
+        "id": 12088,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder035@test.com",
+        "id": 12089,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder036@test.com",
+        "id": 12090,
+        "password": "Test@123"
+      },
+      {
+        "id": 12091,
+        "password": "Test@123",
+        "email": "bidzon_bidder037@test.com"
+      },
+      {
+        "email": "bidzon_bidder038@test.com",
+        "id": 12092,
+        "password": "Test@123"
+      },
+      {
+        "id": 12093,
+        "password": "Test@123",
+        "email": "bidzon_bidder039@test.com"
+      },
+      {
+        "id": 12094,
+        "password": "Test@123",
+        "email": "bidzon_bidder040@test.com"
+      },
+      {
+        "email": "bidzon_bidder041@test.com",
+        "id": 12095,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder042@test.com",
+        "id": 12096,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder043@test.com",
+        "id": 12097,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder044@test.com",
+        "id": 12098,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder045@test.com",
+        "id": 12099,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder046@test.com",
+        "id": 12100,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder047@test.com",
+        "id": 12101,
+        "password": "Test@123"
+      },
+      {
+        "id": 12102,
+        "password": "Test@123",
+        "email": "bidzon_bidder048@test.com"
+      },
+      {
+        "password": "Test@123",
+        "email": "bidzon_bidder049@test.com",
+        "id": 12103
+      },
+      {
+        "email": "bidzon_bidder050@test.com",
+        "id": 12104,
+        "password": "Test@123"
+      },
+      {
+        "password": "Test@123",
+        "email": "bidzon_bidder051@test.com",
+        "id": 12105
+      },
+      {
+        "email": "bidzon_bidder052@test.com",
+        "id": 12106,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder053@test.com",
+        "id": 12107,
+        "password": "Test@123"
+      },
+      {
+        "password": "Test@123",
+        "email": "bidzon_bidder054@test.com",
+        "id": 12108
+      },
+      {
+        "email": "bidzon_bidder055@test.com",
+        "id": 12109,
+        "password": "Test@123"
+      },
+      {
+        "id": 12110,
+        "password": "Test@123",
+        "email": "bidzon_bidder056@test.com"
+      },
+      {
+        "id": 12111,
+        "password": "Test@123",
+        "email": "bidzon_bidder057@test.com"
+      },
+      {
+        "email": "bidzon_bidder058@test.com",
+        "id": 12112,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder059@test.com",
+        "id": 12113,
+        "password": "Test@123"
+      },
+      {
+        "password": "Test@123",
+        "email": "bidzon_bidder060@test.com",
+        "id": 12114
+      },
+      {
+        "email": "bidzon_bidder061@test.com",
+        "id": 12115,
+        "password": "Test@123"
+      },
+      {
+        "id": 12116,
+        "password": "Test@123",
+        "email": "bidzon_bidder062@test.com"
+      },
+      {
+        "id": 12117,
+        "password": "Test@123",
+        "email": "bidzon_bidder063@test.com"
+      },
+      {
+        "email": "bidzon_bidder064@test.com",
+        "id": 12118,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder065@test.com",
+        "id": 12119,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder066@test.com",
+        "id": 12120,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder067@test.com",
+        "id": 12121,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder068@test.com",
+        "id": 12122,
+        "password": "Test@123"
+      },
+      {
+        "password": "Test@123",
+        "email": "bidzon_bidder069@test.com",
+        "id": 12123
+      },
+      {
+        "email": "bidzon_bidder070@test.com",
+        "id": 12124,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder071@test.com",
+        "id": 12125,
+        "password": "Test@123"
+      },
+      {
+        "password": "Test@123",
+        "email": "bidzon_bidder072@test.com",
+        "id": 12126
+      },
+      {
+        "email": "bidzon_bidder073@test.com",
+        "id": 12127,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder074@test.com",
+        "id": 12128,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder075@test.com",
+        "id": 12129,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder076@test.com",
+        "id": 12130,
+        "password": "Test@123"
+      },
+      {
+        "id": 12131,
+        "password": "Test@123",
+        "email": "bidzon_bidder077@test.com"
+      },
+      {
+        "email": "bidzon_bidder078@test.com",
+        "id": 12132,
+        "password": "Test@123"
+      },
+      {
+        "id": 12133,
+        "password": "Test@123",
+        "email": "bidzon_bidder079@test.com"
+      },
+      {
+        "email": "bidzon_bidder080@test.com",
+        "id": 12134,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder081@test.com",
+        "id": 12135,
+        "password": "Test@123"
+      },
+      {
+        "password": "Test@123",
+        "email": "bidzon_bidder082@test.com",
+        "id": 12136
+      },
+      {
+        "email": "bidzon_bidder083@test.com",
+        "id": 12137,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder084@test.com",
+        "id": 12138,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder085@test.com",
+        "id": 12139,
+        "password": "Test@123"
+      },
+      {
+        "id": 12140,
+        "password": "Test@123",
+        "email": "bidzon_bidder086@test.com"
+      },
+      {
+        "email": "bidzon_bidder087@test.com",
+        "id": 12141,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder088@test.com",
+        "id": 12142,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder089@test.com",
+        "id": 12143,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder090@test.com",
+        "id": 12144,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder091@test.com",
+        "id": 12145,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder092@test.com",
+        "id": 12146,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder093@test.com",
+        "id": 12147,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder094@test.com",
+        "id": 12148,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder095@test.com",
+        "id": 12149,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder096@test.com",
+        "id": 12150,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder097@test.com",
+        "id": 12151,
+        "password": "Test@123"
+      },
+      {
+        "email": "bidzon_bidder098@test.com",
+        "id": 12152,
+        "password": "Test@123"
+      },
+      {
+        "id": 12153,
+        "password": "Test@123",
+        "email": "bidzon_bidder099@test.com"
+      },
+      {
+        "password": "Test@123",
+        "email": "bidzon_bidder100@test.com",
+        "id": 12154
+      }
+    ],
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDksImVtYWlsIjoiam9obkBleGFtcGxlLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJDE0RFZycW1rWjVDYW0yWG9GTlhoa2VvR1VMVFYveFMybDZxVjQwVHJpSHdYMmJZcmpZRWs2IiwiaWF0IjoxNzc2ODYzNjUxLCJleHAiOjE3Nzc0Njg0NTF9.98FdyC9MxxBIg523G57OKFtPZcDmk6qqIr6eKNoSOgY"
+  },
+  "root_group": {
+    "name": "",
+    "path": "",
+    "id": "d41d8cd98f00b204e9800998ecf8427e",
+    "groups": [],
+    "checks": [
+        {
+          "name": "bidder login 200",
+          "path": "::bidder login 200",
+          "id": "8038dce6465c96af76abbaa18f213861",
+          "passes": 195,
+          "fails": 0
+        },
+        {
+          "id": "71c597e0bd16828e7c0c2e86da277179",
+          "passes": 212,
+          "fails": 0,
+          "name": "user login 200",
+          "path": "::user login 200"
+        },
+        {
+          "id": "5de507efd81cb6f4f7f7f237d4bd1cce",
+          "passes": 195,
+          "fails": 0,
+          "name": "auction list 200",
+          "path": "::auction list 200"
+        },
+        {
+          "passes": 212,
+          "fails": 0,
+          "name": "user: list 200",
+          "path": "::user: list 200",
+          "id": "2deeb37adb12b2330c49fc2a420d0dd8"
+        },
+        {
+          "fails": 0,
+          "name": "user: view 200",
+          "path": "::user: view 200",
+          "id": "e75e29fa3a9fdf10c1e271c815610398",
+          "passes": 212
+        },
+        {
+          "name": "user: view2 200",
+          "path": "::user: view2 200",
+          "id": "27a49bb1798587eaa6797ef3d4e1648a",
+          "passes": 212,
+          "fails": 0
+        }
+      ]
+  },
+  "options": {
+    "noColor": false,
+    "summaryTrendStats": [
+      "avg",
+      "min",
+      "med",
+      "max",
+      "p(90)",
+      "p(95)"
+    ],
+    "summaryTimeUnit": ""
+  },
+  "state": {
+    "isStdOutTTY": true,
+    "isStdErrTTY": true,
+    "testRunDurationMs": 344468.43194
+  }
+}
